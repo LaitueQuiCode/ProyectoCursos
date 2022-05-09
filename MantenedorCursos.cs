@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoCursos
 {
-    public partial class MantenedorAlumnos: Form
+    public partial class MantenedorCursos : Form
     {
-        public MantenedorAlumnos()
+        public MantenedorCursos()
         {
             InitializeComponent();
         }
