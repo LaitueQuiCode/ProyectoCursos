@@ -55,31 +55,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alumno.cs">
-      <DependentUpon>DBCursosModelo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Curso.cs">
-      <DependentUpon>DBCursosModelo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBCursosDataSetTodo.Designer.cs">
+    <Compile Include="DataSetAlumno.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBCursosDataSetTodo.xsd</DependentUpon>
+      <DependentUpon>DataSetAlumno.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DBCursosModelo.Context.cs">
+    <Compile Include="DataSetCurso.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBCursosModelo.Context.tt</DependentUpon>
+      <DependentUpon>DataSetCurso.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DBCursosModelo.cs">
+    <Compile Include="DataSetProfesor.cs">
+      <DependentUpon>DataSetProfesor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetProfesor.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBCursosModelo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBCursosModelo.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBCursosModelo.edmx</DependentUpon>
+      <DependentUpon>DataSetProfesor.xsd</DependentUpon>
     </Compile>
     <Compile Include="MantenedorAlumnos.cs">
       <SubType>Form</SubType>
@@ -87,13 +79,25 @@
     <Compile Include="MantenedorAlumnos.Designer.cs">
       <DependentUpon>MantenedorAlumnos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Profesor.cs">
-      <DependentUpon>DBCursosModelo.tt</DependentUpon>
+    <Compile Include="MantenedorCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenedorCursos.Designer.cs">
+      <DependentUpon>MantenedorCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenedorProfesores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenedorProfesores.Designer.cs">
+      <DependentUpon>MantenedorProfesores.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MantenedorAlumnos.resx">
       <DependentUpon>MantenedorAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenedorProfesores.resx">
+      <DependentUpon>MantenedorProfesores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -104,25 +108,41 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="DBCursosModelo.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBCursosModelo.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="DBCursosDataSetTodo.xsc">
-      <DependentUpon>DBCursosDataSetTodo.xsd</DependentUpon>
+    <None Include="DataSetAlumno.xsc">
+      <DependentUpon>DataSetAlumno.xsd</DependentUpon>
     </None>
-    <None Include="DBCursosDataSetTodo.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DBCursosDataSetTodo.Designer.cs</LastGenOutput>
+    <None Include="DataSetAlumno.xsd">
       <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetAlumno.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DBCursosDataSetTodo.xss">
-      <DependentUpon>DBCursosDataSetTodo.xsd</DependentUpon>
+    <None Include="DataSetAlumno.xss">
+      <DependentUpon>DataSetAlumno.xsd</DependentUpon>
     </None>
-    <None Include="DBCursosModelo.edmx.diagram">
-      <DependentUpon>DBCursosModelo.edmx</DependentUpon>
+    <None Include="DataSetCurso.xsc">
+      <DependentUpon>DataSetCurso.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetCurso.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetCurso.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetCurso.xss">
+      <DependentUpon>DataSetCurso.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetProfesor.xsc">
+      <DependentUpon>DataSetProfesor.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetProfesor.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetProfesor.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetProfesor.xss">
+      <DependentUpon>DataSetProfesor.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DataSetProfesor.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -138,16 +158,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DBCursos.sql" />
-    <Content Include="DBCursosModelo.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DBCursosModelo.Context.cs</LastGenOutput>
-      <DependentUpon>DBCursosModelo.edmx</DependentUpon>
-    </Content>
-    <Content Include="DBCursosModelo.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBCursosModelo.edmx</DependentUpon>
-      <LastGenOutput>DBCursosModelo.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

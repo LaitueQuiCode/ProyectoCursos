@@ -16,7 +16,7 @@ namespace ProyectoCursos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MantenedorAlumnos());
+            Application.Run(new MantenedorProfesores());
         }
     }
 }
