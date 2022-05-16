@@ -32,9 +32,6 @@ INSERT INTO Alumno(id, pass, nombre, idCurso, nacimiento) VALUES(34567673, '7673
 INSERT INTO Alumno(id, pass, nombre, idCurso, nacimiento) VALUES(78956766, '6766', 'AlumnoPrueba3', 0, 988761600);
 INSERT INTO Alumno(id, pass, nombre, idCurso, nacimiento) VALUES(23423456, '3456', 'AlumnoPrueba4', 0, 988761600);
 
-
 SELECT * FROM Profesor;
 SELECT * FROM Curso;
 SELECT * FROM Alumno;
-
-

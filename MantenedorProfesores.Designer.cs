@@ -49,22 +49,22 @@
             this.txtDigito = new System.Windows.Forms.TextBox();
             this.lblDigito = new System.Windows.Forms.Label();
             this.gridProfesores = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.profesorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetProfesor = new ProyectoCursos.DataSetProfesor();
             this.dataSetProfesorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetProfesorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.profesorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetProfesorBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.profesorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.profesorTableAdapter = new ProyectoCursos.DataSetProfesorTableAdapters.ProfesorTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridProfesores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetProfesor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetProfesorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetProfesorBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetProfesorBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAgregar
@@ -74,6 +74,7 @@
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 0;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             this.btnAgregar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnAgregar_MouseClick);
             // 
             // btnActualizar
@@ -83,6 +84,7 @@
             this.btnActualizar.Size = new System.Drawing.Size(75, 23);
             this.btnActualizar.TabIndex = 1;
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnEliminar
             // 
@@ -236,6 +238,25 @@
             this.gridProfesores.Size = new System.Drawing.Size(318, 350);
             this.gridProfesores.TabIndex = 19;
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "rut";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // profesorBindingSource1
+            // 
+            this.profesorBindingSource1.DataMember = "Profesor";
+            this.profesorBindingSource1.DataSource = this.dataSetProfesor;
+            // 
             // dataSetProfesor
             // 
             this.dataSetProfesor.DataSetName = "DataSetProfesor";
@@ -261,28 +282,9 @@
             this.dataSetProfesorBindingSource2.DataSource = this.dataSetProfesor;
             this.dataSetProfesorBindingSource2.Position = 0;
             // 
-            // profesorBindingSource1
-            // 
-            this.profesorBindingSource1.DataMember = "Profesor";
-            this.profesorBindingSource1.DataSource = this.dataSetProfesor;
-            // 
             // profesorTableAdapter
             // 
             this.profesorTableAdapter.ClearBeforeFill = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "rut";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.Width = 150;
             // 
             // MantenedorProfesores
             // 
@@ -313,12 +315,12 @@
             this.Text = "MantenedorProfesores";
             this.Load += new System.EventHandler(this.MantenedorProfesores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridProfesores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetProfesor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetProfesorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetProfesorBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetProfesorBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
